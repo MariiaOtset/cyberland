@@ -1,3 +1,56 @@
-body {
-    font-family: 'Tangerine', cursive;
+ul,
+ol {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header styles */
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+header {
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Navigation styles */
+nav {
+    background-color: #444;
+    text-align: center;
+    padding: 10px;
+}
+
+.nav-list {
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+/* Main content styles */
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
 }
