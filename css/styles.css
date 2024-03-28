@@ -463,3 +463,13 @@ footer {
     border: none;
     fill: #F4F4FD;
 }
+.contact-link-item.about-us {
+    color: black;
+    background-color: #ffb300;
+}
+.content-wrapper {
+    display: flex;
+    column-gap: 15px;
+}
+
+/* Vacancies page */
