@@ -528,4 +528,41 @@ footer {
      border-radius: 5px;
  }
 
- 
+
+ /* Training page  */
+
+ .training-page {
+    background-color: #bd6603;
+    color: white;
+ }
+ .table-title {
+   color:black;
+ }
+ tr:hover {
+     background-color: #ffb048;
+ }
+ .training-content {
+    display: flex;
+    margin: 20px;
+    gap: 8px;
+ }
+
+   .review {
+    width: 370px;
+       margin: 8px;
+       padding: 8px;
+       border: 1px solid #fff202;
+       border-radius: 5px;
+   }
+   .reviews-title {
+    color: rgb(255, 232, 104);
+    text-align: center;
+    margin: 5px;
+   }
+
+   .author {
+       font-weight: bold;
+       text-align: left;
+       margin: 16px;
+       color: #fffebf;
+   }
