@@ -1,89 +1,359 @@
-<button class="apply" type="button">Apply now!</button>
-<div class="backdrop (is-open) hide">
-  <div class="modal">
-    <button class="modal-button" type="button" aria-label="Modal close button">
-      <svg class="modal-button-icon" width="8" height="8">
-        <use href="./icons.svg#icon-close"></use>
-      </svg>
-    </button>
-    <p class="modal-text">Leave your contacts and we will call you back</p>
-    <form class="modal-form">
-      <div class="form-wrapper">
-        <label class="modal-label" for="user-name">Name</label>
-        <div class="form-field">
-          <input
-            class="modal-form-input"
-            id="user-name"
-            name="user-name"
-            type="text"
-            required
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cyberland</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css"
+    />
+
+    <link href="./css/styles.css" rel="stylesheet" />
+  </head>
+
+  <body class="vacancies-page">
+    <header>
+      <div class="header">
+        <a href="./index.html">
+          <img
+            class="logo-header"
+            src="./images/Cyberland Logo Small 2.png"
+            alt="Cyberland Small Logo"
+            width="160"
+            height="55"
           />
-          <svg class="form-icon" width="18" height="24">
-            <use href="./icons.svg#icon-person"></use>
-          </svg>
+        </a>
+        <nav>
+          <ul class="nav-list">
+            <li>
+              <button type="button" class="btn btn-about-us">
+                <a class="nav-link-item about-us" href="./index.html"
+                  >About Us</a
+                >
+              </button>
+            </li>
+            <li>
+              <button type="button" class="btn btn-apprent">
+                <a
+                  class="nav-link-item apprenticeships"
+                  href="./apprenticeships.html"
+                  >Apprenticeships</a
+                >
+              </button>
+            </li>
+            <li>
+              <button type="button" class="btn btn-vacancies">
+                <a class="nav-link-item vacancies" href="./vacancies.html"
+                  >Vacancies</a
+                >
+              </button>
+            </li>
+            <li>
+              <button type="button" class="btn btn-training">
+                <a class="nav-link-item training" href="./training-courses.html"
+                  >Training courses</a
+                >
+              </button>
+            </li>
+          </ul>
+        </nav>
+        <address class="contact-link">
+          <ul class="contact-list">
+            <li>
+              <a class="contact-link-item" href="mailto:info@cyberland.com"
+                >info@cyberland.com</a
+              >
+            </li>
+            <li>
+              <a class="contact-link-item" href="tel:+110001111111"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+          </ul>
+        </address>
+      </div>
+    </header>
+
+    <div class="content">
+      <h1>Job Vacancies</h1>
+      <p>
+        You can see the list of vacancies that we provide in the table below:
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Role</th>
+            <th>Description</th>
+            <th>Salary</th>
+            <th>Requirements</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Frontend Developer</td>
+            <td>Design and implement user interfaces for web applications.</td>
+            <td>$70,000 - $90,000 per year</td>
+            <td>Proficiency in HTML, CSS, JavaScript, and React.</td>
+          </tr>
+          <tr>
+            <td>Graphic Designer</td>
+            <td>Create visual content for marketing campaigns and websites.</td>
+            <td>$50,000 - $65,000 per year</td>
+            <td>
+              Strong skills in Adobe Creative Suite (Photoshop, Illustrator).
+            </td>
+          </tr>
+          <tr>
+            <td>Data Analyst</td>
+            <td>
+              Analyze and interpret data to provide insights for business
+              decisions.
+            </td>
+            <td>$60,000 - $80,000 per year</td>
+            <td>Experience with SQL, Python, and data visualization tools.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="vacancies-wrapper">
+        <iframe
+          class="video"
+          width="750"
+          height="570"
+          src="https://www.youtube.com/embed/o51S5J7pGuk"
+          title="WEB DEVELOPER Interview Questions And Answers! (How to PASS a Web Development Job Interview!)"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+        <div class="main-job-application-form">
+          <h2 class="apply">Apply Now Form</h2>
+          <form action="#" method="POST" enctype="multipart/form-data">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="name"
+              placeholder="Enter name"
+              required
+            />
+
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="email"
+              placeholder="Enter email"
+              required
+            />
+
+            <label for="phone">Phone Number</label>
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              class="phone"
+              placeholder="Enter phone number"
+              required
+            />
+
+            <label for="position">Position Applying For</label>
+            <select name="position" id="position" required>
+              <option value="developer">Developer</option>
+              <option value="designer">Designer</option>
+              <option value="data analyst">Data Analyst</option>
+            </select>
+
+            <label for="experience">Years of Experience</label>
+            <input
+              class="experience"
+              type="radio"
+              name="experience"
+              value="0-2"
+            />
+            0-2 years <input type="radio" name="experience" value="3-5" /> 3-5
+            years
+
+            <label class="vacancies-input first" for="cover-letter"
+              >Upload Cover Letter</label
+            >
+            <input
+              class="vacancies-input"
+              type="file"
+              name="cover-letter"
+              id="cover-letter"
+              accept=".pdf,.doc,.docx"
+              required
+            />
+
+            <label for="resume">Upload Resume (PDF or Word)</label>
+            <input
+              class="vacancies-input"
+              type="file"
+              name="resume"
+              id="resume"
+              accept=".pdf,.doc,.docx"
+              required
+            />
+
+            <input type="submit" value="Submit" />
+          </form>
         </div>
       </div>
-      <div class="form-wrapper">
-        <label class="modal-label" for="user-name">Phone</label>
-        <div class="form-field">
-          <input
-            class="modal-form-input"
-            id="user-phone"
-            name="user-phone"
-            type="tel"
-            required
+    </div>
+    <footer>
+      <div class="footer-container">
+        <a href="./index.html">
+          <img
+            class="logo-header"
+            src="./images/Cyberland Logo Small 2.png"
+            alt="Cyberland Small Logo"
+            width="160"
+            height="55"
           />
-          <svg class="form-icon" width="18" height="24">
-            <use href="./icons.svg#icon-phone"></use>
-          </svg>
+        </a>
+        <div class="footer-contacts">
+          <h3 class="title-contacts">Contact</h3>
+          <p class="footer-text">
+            <a class="contact-link-item" href="tel:+110001111111"
+              >+11 (000) 111-11-11</a
+            >
+          </p>
+          <p class="footer-text">
+            <a class="contact-link-item" href="mailto:info@cyberland.com"
+              >info@cyberland.com</a
+            >
+          </p>
+        </div>
+
+        <div class="footer-menu">
+          <h2 class="footer-nav">Navigation</h2>
+          <div class="menu-wrapper">
+            <h3 class="footer-menu-nav">
+              <a class="footer nav-link-item about-us" href="./index.html"
+                >About Us</a
+              >
+            </h3>
+            <h3 class="footer-menu-nav">
+              <a
+                class="footer nav-link-item apprenticeships"
+                href="./apprenticeships.html"
+                >Apprenticeships</a
+              >
+            </h3>
+            <h3 class="footer-menu-nav">
+              <a class="footer nav-link-item vacancies" href="./vacancies.html"
+                >Vacancies</a
+              >
+            </h3>
+            <h3 class="footer-menu-nav">
+              <a
+                class="footer nav-link-item training"
+                href="./training-courses.html"
+                >Training courses</a
+              >
+            </h3>
+          </div>
         </div>
       </div>
-      <div class="form-wrapper">
-        <label class="modal-label" for="user-email">Email</label>
-        <div class="form-field">
-          <input
-            class="modal-form-input"
-            id="user-email"
-            name="user-email"
-            type="email"
-            required
-          />
-          <svg class="form-icon" width="18" height="24">
-            <use href="./icons.svg#icon-email"></use>
+      <p class="copyright">© 2024 Cyberland. All rights reserved.</p>
+    </footer>
+
+    <div class="backdrop (is-open) hide">
+      <div class="modal">
+        <button
+          class="modal-button"
+          type="button"
+          aria-label="Modal close button"
+        >
+          <svg class="modal-button-icon" width="8" height="8">
+            <use href="./icons.svg#icon-close"></use>
           </svg>
-        </div>
+        </button>
+        <p class="modal-text">Leave your contacts and we will call you back</p>
+        <form class="modal-form">
+          <div class="form-wrapper">
+            <label class="modal-label" for="user-name">Name</label>
+            <div class="form-field">
+              <input
+                class="modal-form-input"
+                id="user-name"
+                name="user-name"
+                type="text"
+                required
+              />
+              <svg class="form-icon" width="18" height="24">
+                <use href="./icons.svg#icon-person"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="form-wrapper">
+            <label class="modal-label" for="user-name">Phone</label>
+            <div class="form-field">
+              <input
+                class="modal-form-input"
+                id="user-phone"
+                name="user-phone"
+                type="tel"
+                required
+              />
+              <svg class="form-icon" width="18" height="24">
+                <use href="./icons.svg#icon-phone"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="form-wrapper">
+            <label class="modal-label" for="user-email">Email</label>
+            <div class="form-field">
+              <input
+                class="modal-form-input"
+                id="user-email"
+                name="user-email"
+                type="email"
+                required
+              />
+              <svg class="form-icon" width="18" height="24">
+                <use href="./icons.svg#icon-email"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="form-wrapper-textarea">
+            <label class="modal-label" for="user-comment">Comment</label>
+            <textarea
+              class="textarea-field"
+              id="user-comment"
+              name="user-comment"
+              rows="5"
+              placeholder="Text input"
+            ></textarea>
+          </div>
+          <div class="form-agreement-main">
+            <input
+              class="field-checkbox visually-hidden"
+              id="user-privacy"
+              type="checkbox"
+              name="user-privacy"
+              value="true"
+            />
+            <label class="modal-label form-agreement" for="user-privacy">
+              <span class="form-agreement-checkbox">
+                <svg class="form-agreement-icon" width="16" height="16">
+                  <use href="./icons.svg#icon-button-checked"></use>
+                </svg>
+              </span>
+              <span>
+                I accept the terms and conditions of the
+                <a class="form-agreement-link" href=""> Privacy Policy</a>
+              </span>
+            </label>
+          </div>
+          <button class="modal-form-button" type="submit">Send</button>
+        </form>
       </div>
-      <div class="form-wrapper-textarea">
-        <label class="modal-label" for="user-comment">Comment</label>
-        <textarea
-          class="textarea-field"
-          id="user-comment"
-          name="user-comment"
-          rows="5"
-          placeholder="Text input"
-        ></textarea>
-      </div>
-      <div class="form-agreement-main">
-        <input
-          class="field-checkbox visually-hidden"
-          id="user-privacy"
-          type="checkbox"
-          name="user-privacy"
-          value="true"
-        />
-        <label class="modal-label form-agreement" for="user-privacy">
-          <span class="form-agreement-checkbox">
-            <svg class="form-agreement-icon" width="16" height="16">
-              <use href="./icons.svg#icon-button-checked"></use>
-            </svg>
-          </span>
-          <span>
-            I accept the terms and conditions of the
-            <a class="form-agreement-link" href=""> Privacy Policy</a>
-          </span>
-        </label>
-      </div>
-      <button class="modal-form-button" type="submit">Send</button>
-    </form>
-  </div>
-</div>
+    </div>
+  </body>
+</html>
