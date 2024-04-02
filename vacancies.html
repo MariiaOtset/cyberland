@@ -155,7 +155,13 @@
         ></iframe>
         <div class="main-job-application-form">
           <h2 class="apply">Apply Now Form</h2>
-          <form action="#" method="POST" enctype="multipart/form-data">
+          <form
+            name="myForm"
+            action="#"
+            method="POST"
+            onsubmit="return validateForm()"
+            enctype="multipart/form-data"
+          >
             <label for="name">Name</label>
             <input
               type="text"
@@ -163,7 +169,6 @@
               name="name"
               class="name"
               placeholder="Enter name"
-              required
             />
 
             <label for="email">Email</label>
@@ -287,5 +292,6 @@
       </div>
       <p class="copyright">© 2024 Cyberland. All rights reserved.</p>
     </footer>
+    <script src="main.js" type="module"></script>
   </body>
 </html>
